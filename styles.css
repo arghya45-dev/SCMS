@@ -166,6 +166,7 @@ body {
     height: 100vh;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('') no-repeat center center/cover;
+    background-image: url();
 }
 
 
