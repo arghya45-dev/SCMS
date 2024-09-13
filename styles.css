@@ -3,14 +3,14 @@
 
 
 :root {
-    --primary-color: #6366F1;
-    --accent-color: #3f83f8;
-    --text-color: #333333;
-    --link-color: #2563eb;
-    --background-color: #ffffff;
-    --light-gray: #f0f0f0;
-    --gray: #808080;
-    --dark-gray: #555;
+    --primary-color: #4F46E5;
+    --secondary-color: #38BDF8;
+    --text-color: #FFFFFF;
+    --background-color: #111827;
+    --accent-color: #10B981;
+    --light-gray: #D1D5DB;
+    --gray: #6B7280;
+    --dark-gray: #374151;
 }
 
 *{
@@ -158,66 +158,81 @@ body {
 }
 
 
-
 .hero-section {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('') no-repeat center center/cover;
-    background-image: url();
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://your-image-url.jpg') no-repeat center center/cover;
+    animation: hero-bg 10s ease-in-out infinite;
 }
 
-
+.hero-content {
+    text-align: center;
+    color: var(--text-color);
+}
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    font-weight: 900;
     margin-bottom: 20px;
-    color: #00ff99;
-    animation: slidefromleft 1s ease forwards;
-    opacity: 0;
-
+    animation: slidein 1s ease forwards;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: slidefromleft 1s ease forwards;
-    opacity: 0;
+    animation: fadein 1.5s ease forwards;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #00ff99;
-    color: #1a1a1a;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: var(--background-color);
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
-    animation: slidefromleft 1s ease forwards;
-    opacity: 0;
+    animation: fadein 2s ease forwards;
 }
 
-@keyframes slidefromleft {
-    
-    0%{
-        opacity:0 ;
-        transform: translateX(-100%);
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+@keyframes hero-bg {
+    0% {
+        background-position: center top;
     }
-    100%{
+    50% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-.cta-button:hover {
-    background-color: #009966;
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 
 
 
@@ -440,7 +455,7 @@ body {
 
 /* TESTIMONIAL SECTION*/
 body {
-    background-color: #121212;
+    background-color:  #1a1a1a;
     color: #e0e0e0;
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -553,105 +568,43 @@ body {
 
 
 /* Contact section */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Contact Section */
 .contact-section {
-    padding: 60px 20px;
-    background-color: #1e1e1e;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.contact-section h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color:  #1a1a1a;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #00aaff;
 }
 
-.contact-section p {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 16px;
-    color: #aaaaaa;
-}
-
-/* Contact Info */
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    align-items: center;
-}
-
-.contact-item h3 {
-    font-size: 18px;
-    color: #00aaff;
-    margin-bottom: 10px;
-}
-
-.contact-item p {
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.contact-item a {
-    color: #00aaff;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-    background-color: #2a2a2a;
-    border: 1px solid #00aaff;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #cccccc;
+    padding: 15px;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
 }
 
 .contact-form button {
-    background-color: #00aaff;
+    padding: 15px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
     border: none;
-    border-radius: 4px;
-    padding: 12px;
-    font-size: 18px;
-    color: #ffffff;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #0088cc;
+    background-color: var(--primary-color);
 }
 
 

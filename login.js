@@ -1,14 +1,10 @@
-const loginBtn = document.getElementById('loginBtn');
-const signupBtn = document.getElementById('signupBtn');
-const loginForm = document.getElementById('loginForm');
-const signupForm = document.getElementById('signupForm');
+let container = document.getElementById('container')
 
-loginBtn.addEventListener('click', () => {
-  loginForm.classList.add('active');
-  signupForm.classList.remove('active');
-});
+toggle = () => {
+	container.classList.toggle('sign-in')
+	container.classList.toggle('sign-up')
+}
 
-signupBtn.addEventListener('click', () => {
-  signupForm.classList.add('active');
-  loginForm.classList.remove('active');
-});
+setTimeout(() => {
+	container.classList.add('sign-in')
+}, 200)
