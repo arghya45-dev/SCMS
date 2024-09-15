@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="light-theme.css">
+    <script defer src="theme-toogle.js"></script>
 </head>
 <body>
+
+    <div class="theme-toggle"></div>
+        <input type="checkbox" id="theme-toggle-checkbox">
+        <label for="theme-toggle-checkbox" class="theme-label">
+            <span class="theme-icon light">🌞</span>
+            <span class="theme-icon dark">🌜</span>
+        </label>
+    </div>
+   
+    
+    
+
     <div class="header">
 
         <header id="home" class="header-content">
@@ -24,7 +37,7 @@
             </nav>
 
             <a href="login.html" class="login-button">
-                Login
+                Register
             </a>
 
             <button type="button" class="menu-button">
@@ -227,5 +240,7 @@
 
     </div>
     
+
+    <script src="script.js"></script>
 </body>
 </html>

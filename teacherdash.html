@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="teacherdash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>Teacher Portal</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active">Dashboard</a>
+                <a href="#" class="menu-item">Profile</a>
+                <a href="#" class="menu-item">Class Management</a>
+                <a href="#" class="menu-item">Assignments</a>
+                <a href="#" class="menu-item">Attendance</a>
+                <a href="#" class="menu-item">Messages</a>
+                <a href="#" class="menu-item">Student Profiles</a>
+                <a href="#" class="menu-item">Settings</a>
+                <a href="#" class="menu-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <h2>Welcome, Teacher</h2>
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar">
+                    <span class="user-name">Mr . Manas</span>
+                </div>
+            </header>
+
+            <!-- Widgets -->
+            <div class="widgets-container">
+                <!-- Class Management Widget -->
+                <div class="widget class-management-widget">
+                    <h3>Class Management</h3>
+                    <ul>
+                        <li>Class 10A - 30 students</li>
+                        <li>Class 9B - 28 students</li>
+                        <li>Class 11C - 32 students</li>
+                    </ul>
+                    <a href="#" class="btn">Manage Classes</a>
+                </div>
+
+                <!-- Upcoming Assignments Widget -->
+                <div class="widget assignments-widget">
+                    <h3>Upcoming Assignments</h3>
+                    <ul>
+                        <li>Math Homework - Sept 20</li>
+                        <li>Science Project - Sept 25</li>
+                        <li>History Presentation - Sept 30</li>
+                    </ul>
+                    <a href="#" class="btn">View All</a>
+                </div>
+
+                <!-- Attendance Overview Widget -->
+                <div class="widget attendance-widget">
+                    <h3>Attendance Overview</h3>
+                    <p><strong>Class 10A:</strong> 95%</p>
+                    <p><strong>Class 9B:</strong> 88%</p>
+                    <p><strong>Class 11C:</strong> 92%</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+
+                <!-- Messages Widget -->
+                <div class="widget messages-widget">
+                    <h3>Recent Messages</h3>
+                    <ul>
+                        <li>Message from Principal - Sept 18</li>
+                        <li>Message from John Doe (Student) - Sept 17</li>
+                        <li>Message from Parent - Sept 16</li>
+                    </ul>
+                    <a href="#" class="btn">View All Messages</a>
+                </div>
+
+                <!-- Student Profiles Widget -->
+                <div class="widget student-profiles-widget">
+                    <h3>Student Profiles</h3>
+                    <ul>
+                        <li><a href="student-profile.html?id=1">Arka Dasgupta - Class 10A</a></li>
+                        <li><a href="student-profile.html?id=2">Oindrila Chakraborty - Class 9B</a></li>
+                        <li><a href="student-profile.html?id=3">Anirban Das - Class 11C</a></li>
+                    </ul>
+                    <a href="#" class="btn">View All Students</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

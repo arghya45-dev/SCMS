@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Dashboard</title>
+    <link rel="stylesheet" href="admindash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>Admin Portal</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active">Dashboard</a>
+                <a href="#" class="menu-item">Profile</a>
+                <a href="#" class="menu-item">Manage Students</a>
+                <a href="#" class="menu-item">Manage Teachers</a>
+                <a href="#" class="menu-item">Attendance</a>
+                <a href="#" class="menu-item">Messages</a>
+                <a href="#" class="menu-item">Settings</a>
+                <a href="#" class="menu-item">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <h2>Welcome, Admin</h2>
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar">
+                    <span class="user-name">Admin Name</span>
+                </div>
+            </header>
+
+            <!-- Widgets -->
+            <div class="widgets-container">
+                <!-- Students Widget -->
+                <div class="widget students-widget">
+                    <h3>Manage Students</h3>
+                    <ul>
+                        <li><a href="student-profile.html?id=1">John Doe - Class 10A</a></li>
+                        <li><a href="student-profile.html?id=2">Emily Brown - Class 9B</a></li>
+                        <li><a href="student-profile.html?id=3">Michael Lee - Class 11C</a></li>
+                    </ul>
+                    <a href="#" class="btn">View All Students</a>
+                </div>
+
+                <!-- Teachers Widget -->
+                <div class="widget teachers-widget">
+                    <h3>Manage Teachers</h3>
+                    <ul>
+                        <li><a href="teacher-profile.html?id=1">Jane Smith - Class 10A</a></li>
+                        <li><a href="teacher-profile.html?id=2">David Wilson - Class 9B</a></li>
+                        <li><a href="teacher-profile.html?id=3">Linda Clark - Class 11C</a></li>
+                    </ul>
+                    <a href="#" class="btn">View All Teachers</a>
+                </div>
+
+                <!-- Attendance Overview Widget -->
+                <div class="widget attendance-widget">
+                    <h3>Attendance Overview</h3>
+                    <p><strong>Class 10A:</strong> 95%</p>
+                    <p><strong>Class 9B:</strong> 88%</p>
+                    <p><strong>Class 11C:</strong> 92%</p>
+                    <a href="#" class="btn">View Attendance</a>
+                </div>
+
+                <!-- Messages Widget -->
+                <div class="widget messages-widget">
+                    <h3>Recent Messages</h3>
+                    <ul>
+                        <li>Message from Principal - Sept 18</li>
+                        <li>Message from Parent - Sept 17</li>
+                        <li>Message from Student - Sept 16</li>
+                    </ul>
+                    <a href="#" class="btn">View All Messages</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -274,6 +274,22 @@ body {
   right: 50%;
 }
 
+.input-group select {
+	width: 100%;
+	padding: 1rem 3rem;
+	font-size: 1rem;
+	background-color: var(--gray);
+	border-radius: .5rem;
+	border: 0.125rem solid var(--white);
+	outline: none;
+}
+
+.input-group select:focus {
+	border: 0.125rem solid var(--primary-color);
+}
+
+
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 425px) {
