@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard with Animations</title>
+    <title>Student Dashboard - Enhanced</title>
     <link rel="stylesheet" href="studentdash.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
-                <h2>Student Portal</h2>
+                <h2><i class="fas fa-user-graduate"></i> Student Portal</h2>
             </div>
             <nav class="menu">
-                <a href="#" class="menu-item active">Dashboard</a>
-                <a href="#" class="menu-item ">Profile</a>
-                <a href="#" class="menu-item ">Assignments</a>
-                <a href="#" class="menu-item ">Attendance</a>
-                <a href="#" class="menu-item ">Messages</a>
-                <a href="#" class="menu-item ">Settings</a>
-                <a href="#" class="menu-item ">Logout</a>
+                <a href="#" class="menu-item active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="#" class="menu-item"><i class="fas fa-user"></i> Profile</a>
+                <a href="#" class="menu-item"><i class="fas fa-book"></i> Assignments</a>
+                <a href="#" class="menu-item"><i class="fas fa-calendar-check"></i> Attendance</a>
+                <a href="#" class="menu-item"><i class="fas fa-envelope"></i> Messages</a>
+                <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Performance</a>
+                <a href="#" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </nav>
         </div>
 
@@ -28,55 +33,90 @@
         <div class="main-content">
             <!-- Top Navbar -->
             <div class="top-nav">
-                <h2>Welcome, Student</h2>
+                <h2>Welcome, Arghya Chakraborty</h2>
                 <div class="user-info">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar">
+                    <img src="./images/arghya1.jpg" alt="User Avatar">
                     <span class="user-name"> Arghya Chakraborty</span>
                 </div>
             </div>
 
-            <!-- Widgets and Cards Section -->
-            <div class="widgets-container">
-                <!-- Profile Widget -->
-                <div class="widget profile-widget">
-                    <h3>Profile Overview</h3>
-                    <img src="https://via.placeholder.com/80" alt="Profile Picture">
-                    <p><strong>Name:</strong> Arghya Chakraborty</p>
-                    <p><strong>Grade:</strong> 10</p>
-                    <p><strong>Student ID:</strong> #123456</p>
+            <!-- Overview Section -->
+            <div class="overview-cards">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Profile Overview</h3>
+                        <img src="./images/arghya1.jpg" alt="Profile Picture">
+                        <p><strong>Name:</strong> Arghya Chakraborty</p>
+                        <p><strong>Grade:</strong> 10</p>
+                        <p><strong>Student ID:</strong> #123456</p>
+                        <p><strong>Rank:</strong> 5th in Class</p>
+                    </div>
                 </div>
 
-                <!-- Notifications Widget -->
-                <div class="widget notifications-widget">
-                    <h3>Notifications</h3>
-                    <ul>
-                        <li>Assignment due on Sept 20</li>
-                        <li>Parent-teacher meeting on Sept 22</li>
-                        <li>New message from Mrs. Smith</li>
-                    </ul>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Notifications</h3>
+                        <ul>
+                            <li>Assignment due on Sept 20</li>
+                            <li>Parent-teacher meeting on Sept 22</li>
+                            <li>New message from Mrs. Smith</li>
+                            <li>Sports day event on Oct 2</li>
+                            <li>Library books due on Sept 25</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Assignments Widget -->
-                <div class="widget assignments-widget">
-                    <h3>Upcoming Assignments</h3>
-                    <ul>
-                        <li>Math Homework - Sept 20</li>
-                        <li>Science Project - Sept 25</li>
-                        <li>English Essay - Sept 28</li>
-                    </ul>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Upcoming Assignments</h3>
+                        <ul>
+                            <li>Math Homework - Sept 20</li>
+                            <li>Science Project - Sept 25</li>
+                            <li>English Essay - Sept 28</li>
+                            <li>History Presentation - Oct 1</li>
+                            <li>Geography Quiz - Oct 3</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Performance Widget -->
-                <div class="widget performance-widget">
-                    <h3>Performance Overview</h3>
-                    <div class="performance-details">
-                        <p><strong>Math:</strong> 90%</p>
-                        <p><strong>Science:</strong> 85%</p>
-                        <p><strong>English:</strong> 88%</p>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Overall Performance Overview</h3>
+                        <canvas id="studentProgressChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Subject Performance</h3>
+                        <canvas id="subjectPerformanceChart" width="400" height="200"></canvas>
                     </div>
                 </div>
             </div>
+
+            <!-- Scrolling Charts Section -->
+            <div class="scrolling-section">
+                <div class="scrolling-chart-container">
+                    <h3></h3>
+                    <canvas id="scrollingChart" width="750" height="190"></canvas>
+                    <p id="scrollingChartAvg">Average Weekly Performance: </p>
+                </div>
+
+                <div class="attendance-tracker-container">
+                    <canvas id="attendanceChart" width="550" height="185"></canvas>
+                    <p id="attendanceChartAvg">Average Attendance: </p>
+                    <h3></h3>
+                </div>
+
+            </div>
+
+            
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.1.1/dist/chartjs-plugin-zoom.min.js"></script>
+    <script src="studentdash.js"></script>
 </body>
+
 </html>

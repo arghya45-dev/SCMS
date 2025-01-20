@@ -115,6 +115,7 @@ body{
 
 /* Theme Toggle Styles */
 .theme-toggle {
+    
     position: fixed;
     top: 20px;
     right: 20px;
